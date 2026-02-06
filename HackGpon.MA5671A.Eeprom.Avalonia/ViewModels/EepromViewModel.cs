@@ -38,7 +38,7 @@ public partial class EEPROMViewModel : ObservableObject
             new EepromField { StartAddress = 40, Size = 16, Name = "Vendor PN", DefaultValue = "0x4D 0x41 0x35 0x36 0x37 0x31 0x41 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 0x20 (MA5671A)", Description = "Part number provided by SFP vendor (ASCII)" },
             new EepromField { StartAddress = 56, Size = 4, Name = "Vendor rev", DefaultValue = "0x30 0x30 0x30 0x30 (0000)", Description = "Revision level for part number provided by vendor (ASCII)" },
             new EepromField { StartAddress = 60, Size = 2, Name = "Wavelength", DefaultValue = "0x05 0x1E (1310nm TX)", Description = "Laser wavelength" },
-            new EepromField { StartAddress = 62, Size = 1, Name = "Fibre Channel Speed 2", DefaultValue = "0x00 (No support)", Description = "Transceiver’s Fibre Channel speed capabilities" },
+            new EepromField { StartAddress = 62, Size = 1, Name = "Fibre Channel Speed 2", DefaultValue = "0x00 (No support)", Description = "Transceiverâ€™s Fibre Channel speed capabilities" },
             new EepromField { StartAddress = 63, Size = 1, Name = "CC_BASE", DefaultValue = "", Description = "Check code for Base ID Fields (addresses 0 to 62)" },
 
             // EXTENDED ID FIELDS (SFF-8472)
@@ -46,21 +46,21 @@ public partial class EEPROMViewModel : ObservableObject
             new EepromField { StartAddress = 66, Size = 1, Name = "Signaling Rate, max", DefaultValue = "0x00 (No specified)", Description = "Upper signaling rate margin, units of %" },
             new EepromField { StartAddress = 67, Size = 1, Name = "Signaling Rate, min", DefaultValue = "0x00 (No specified)", Description = "Lower signaling rate margin, units of %" },
             new EepromField { StartAddress = 68, Size = 16, Name = "Vendor SN", DefaultValue = "Unique in each SFP", Description = "Serial number provided by vendor (ASCII)" },
-            new EepromField { StartAddress = 84, Size = 8, Name = "Date code", DefaultValue = "Unique in each SFP", Description = "Vendor’s manufacturing date code" },
+            new EepromField { StartAddress = 84, Size = 8, Name = "Date code", DefaultValue = "Unique in each SFP", Description = "Vendorâ€™s manufacturing date code" },
             new EepromField { StartAddress = 92, Size = 1, Name = "Diagnostic Monitoring Type", DefaultValue = "0x68 (Digital diagnostic, Internally calibrated, Received average power type)", Description = "Indicates which type of diagnostic monitoring is implemented" },
             new EepromField { StartAddress = 93, Size = 1, Name = "Enhanced Options", DefaultValue = "0xE0 (Alarm/warning flags, soft TX_DISABLE control, soft TX_FAULT monitoring)", Description = "Indicates which optional enhanced features are implemented" },
             new EepromField { StartAddress = 94, Size = 1, Name = "SFF-8472 Compliance", DefaultValue = "0x03 (Rev 10.2 of SFF-8472)", Description = "Indicates which revision of SFF-8472 the transceiver complies with" },
             new EepromField { StartAddress = 95, Size = 1, Name = "CC_EXT", DefaultValue = "", Description = "Check code for the Extended ID Fields (addresses 64 to 94)" },
 
             // VENDOR SPECIFIC FIELDS
-            new EepromField { StartAddress = 96, Size = 32, Name = "Vendor data", DefaultValue = "Not sure if it’s unique or not", Description = "Vendor specific data (ASCII)" },
+            new EepromField { StartAddress = 96, Size = 32, Name = "Vendor data", DefaultValue = "Not sure if itâ€™s unique or not", Description = "Vendor specific data (ASCII)" },
 
 
             ] }, { Utils.Eeprom.A2, [
-                new EepromField { StartAddress = 0, Size = 2, Name = "Temp High Alarm", DefaultValue = "0x5F 0x00 (95?)", Description = "Value expressed in two’s complement" },
-                new EepromField { StartAddress = 2, Size = 2, Name = "Temp Low Alarm", DefaultValue = "0xCE 0x00 (-50?)", Description = "Value expressed in two’s complement" },
-                new EepromField { StartAddress = 4, Size = 2, Name = "Temp High Warning", DefaultValue = "0x5A 0x00 (90?)", Description = "Value expressed in two’s complement" },
-                new EepromField { StartAddress = 6, Size = 2, Name = "Temp Low Warning", DefaultValue = "0xD3 0x00 (-45?)", Description = "Value expressed in two’s complement" },
+                new EepromField { StartAddress = 0, Size = 2, Name = "Temp High Alarm", DefaultValue = "0x5F 0x00 (95?)", Description = "Value expressed in twoâ€™s complement" },
+                new EepromField { StartAddress = 2, Size = 2, Name = "Temp Low Alarm", DefaultValue = "0xCE 0x00 (-50?)", Description = "Value expressed in twoâ€™s complement" },
+                new EepromField { StartAddress = 4, Size = 2, Name = "Temp High Warning", DefaultValue = "0x5A 0x00 (90?)", Description = "Value expressed in twoâ€™s complement" },
+                new EepromField { StartAddress = 6, Size = 2, Name = "Temp Low Warning", DefaultValue = "0xD3 0x00 (-45?)", Description = "Value expressed in twoâ€™s complement" },
                 new EepromField { StartAddress = 8, Size = 2, Name = "Voltage High Alarm", DefaultValue = "0x8C 0xA0 (3.6V)", Description = "Value expressed in volt subunits1" },
                 new EepromField { StartAddress = 10, Size = 2, Name = "Voltage Low Alarm", DefaultValue = "0x75 0x30 (3.0V)", Description = "Value expressed in volt subunits1" },
                 new EepromField { StartAddress = 12, Size = 2, Name = "Voltage High Warning", DefaultValue = "0x88 0xB8 (3.5V)", Description = "Value expressed in volt subunits1" },
@@ -88,7 +88,7 @@ public partial class EEPROMViewModel : ObservableObject
                 new EepromField { StartAddress = 80, Size = 2, Name = "TX_PWR(Slope) Calibration", DefaultValue = "0x01 0x00", Description = "Slope for TX Power calibration" },
                 new EepromField { StartAddress = 82, Size = 2, Name = "TX_PWR(Offset) Calibration", DefaultValue = "0x00 0x00", Description = "Offset for TX Power calibration" },
                 new EepromField { StartAddress = 84, Size = 2, Name = "T(Slope) Calibration", DefaultValue = "0x01 0x00", Description = "Slope for Temperature calibration" },
-                new EepromField { StartAddress = 86, Size = 2, Name = "T(Offset) Calibration", DefaultValue = "0x00 0x00", Description = "Offset for Temperature calibration, in units of 256ths °C" },
+                new EepromField { StartAddress = 86, Size = 2, Name = "T(Offset) Calibration", DefaultValue = "0x00 0x00", Description = "Offset for Temperature calibration, in units of 256ths Â°C" },
                 new EepromField { StartAddress = 88, Size = 2, Name = "V(Slope) Calibration", DefaultValue = "0x01 0x00", Description = "Slope for VCC calibration" },
                 new EepromField { StartAddress = 90, Size = 2, Name = "V(Offset) Calibration", DefaultValue = "0x00 0x00", Description = "Offset for VCC calibration" },
                 new EepromField { StartAddress = 95, Size = 1, Name = "CC_DMI", DefaultValue = "", Description = "Check code for Base Diagnostic Fields (addresses 0 to 94)" },

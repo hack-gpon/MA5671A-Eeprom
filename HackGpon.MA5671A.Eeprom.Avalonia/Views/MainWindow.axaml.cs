@@ -1,4 +1,4 @@
-using Avalonia.Controls;
+﻿using Avalonia.Controls;
 
 namespace HackGpon.MA5671A.Eeprom.Avalonia.Views;
 

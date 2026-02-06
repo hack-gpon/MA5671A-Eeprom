@@ -1,13 +1,13 @@
-# MA5671A EEPROM Editor
+﻿# MA5671A EEPROM Editor
 
 A cross-platform desktop application for editing MA5671A SFP module EEPROM data (A0 and A2 addresses).
 
 ## Features
 
-- ?? Edit EEPROM fields for MA5671A SFP modules
-- ?? Support for both A0 and A2 EEPROM addresses
-- ?? Cross-platform support (Windows, Linux, macOS)
-- ?? Modern Fluent UI design with Avalonia
+- 📝 Edit EEPROM fields for MA5671A SFP modules
+- 🔄 Support for both A0 and A2 EEPROM addresses
+- 💻 Cross-platform support (Windows, Linux, macOS)
+- 🎨 Modern Fluent UI design with Avalonia
 
 ## Screenshots
 
@@ -15,21 +15,21 @@ A cross-platform desktop application for editing MA5671A SFP module EEPROM data 
 
 ## Requirements
 
-- **From Releases**: Nessun requisito - l'applicazione � self-contained con .NET incluso
+- **From Releases**: No requirements - the application is self-contained with .NET included, work also on Linux!
 - **Build from Source**: .NET 8.0 SDK
 
 ## Installation
 
 ### From Releases (Recommended)
 
-Download the latest release for your platform from the [Releases](../../releases) page. No .NET installation required!
+Download the latest release for your platform from the [Releases](https://github.com/hack-gpon/MA5671A-Eeprom) page. No .NET installation required!
 
 ### Build from Source
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/MA5671A_EEPROM_A0A2_VS.git
-   cd MA5671A_EEPROM_A0A2_VS
+   git clone https://github.com/hack-gpon/MA5671A-Eeprom
+   cd MA5671A-Eeprom
    ```
 
 2. Build the project:
@@ -57,7 +57,7 @@ Download the latest release for your platform from the [Releases](../../releases
 
 ## License
 
-This project is open source. See the LICENSE file for details.
+This project is open source. See the [LICENSE file](https://github.com/hack-gpon/MA5671A-Eeprom/blob/main/LICENSE.txt) for details.
 
 ## Contributing
 
