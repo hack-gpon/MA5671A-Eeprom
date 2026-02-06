@@ -1,0 +1,34 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="vm:MainViewModel"
+             xmlns:vm="clr-namespace:HackGpon.MA5671A.Eeprom.Avalonia.ViewModels"      
+             x:Class="HackGpon.MA5671A.Eeprom.Avalonia.Views.MainView">
+    
+    <StackPanel Margin="10" Spacing="10">
+        <TextBlock Text="Base64 Input (paste here - auto-decodes):" FontWeight="Bold" />
+        <TextBox Text="{Binding Base64Value}" 
+                 FontFamily="Consolas" 
+                 FontSize="14" 
+                 AcceptsReturn="True"
+                 Height="150"
+                 TextWrapping="Wrap"
+                 Watermark="Paste your begin-base64 encoded data here..." />
+        
+        <TextBlock Text="Hex Preview (auto-updated):" FontWeight="Bold" />
+        <TextBox Text="{Binding HexValue, Mode=OneWay}" 
+                 IsReadOnly="True" 
+                 FontFamily="Consolas" 
+                 FontSize="14"
+                 Height="80"
+                 TextWrapping="Wrap" />
+        
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <Button Command="{Binding DecodeCommand}">Edit EEPROM Fields</Button>
+            <Button Command="{Binding InfoCommand}">Info</Button>
+        </StackPanel>
+    </StackPanel>
+    
+</UserControl>

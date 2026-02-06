@@ -1,0 +1,54 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="970" d:DesignHeight="800"
+             x:DataType="vm:EEPROMViewModel"
+             xmlns:vm="clr-namespace:HackGpon.MA5671A.Eeprom.Avalonia.ViewModels"
+             xmlns:utils="clr-namespace:HackGpon.MA5671A.Eeprom.Avalonia.Utils"
+             x:Class="HackGpon.MA5671A.Eeprom.Avalonia.Views.EEPROMView">
+
+    <DockPanel Margin="10">
+        <!-- Save Button at bottom -->
+        <Button DockPanel.Dock="Bottom" 
+                Content="Save Data to Base64" 
+                Command="{Binding SaveCommand}"
+                Margin="0,10,0,0"
+                HorizontalAlignment="Stretch" />
+
+        <!-- Scrollable panel with EEPROM fields -->
+        <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="4">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" 
+                          VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Fields}" Margin="10">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="utils:EepromFieldValue">
+                            <Grid ColumnDefinitions="300,180,*" Margin="0,3">
+                                <!-- Address range and field name -->
+                                <TextBlock Grid.Column="0" 
+                                           Text="{Binding Label}"
+                                           VerticalAlignment="Center" />
+                                
+                                <!-- Hex value input -->
+                                <TextBox Grid.Column="1" 
+                                         Text="{Binding Value, Mode=TwoWay}"
+                                         MaxLength="{Binding MaxLength}"
+                                         ToolTip.Tip="{Binding Field.DefaultValue, StringFormat='Default: {0}'}"
+                                         FontFamily="Consolas"
+                                         Margin="10,0" />
+                                
+                                <!-- Description -->
+                                <TextBlock Grid.Column="2" 
+                                           Text="{Binding Field.Description}"
+                                           VerticalAlignment="Center"
+                                           TextTrimming="CharacterEllipsis"
+                                           Foreground="Gray" />
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Border>
+    </DockPanel>
+
+</UserControl>
