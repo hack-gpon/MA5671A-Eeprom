@@ -15,7 +15,7 @@
                  AcceptsReturn="True"
                  Height="150"
                  TextWrapping="Wrap"
-                 Watermark="Paste your begin-base64 encoded data here..." />
+                 PlaceholderText="Paste your begin-base64 encoded data here..." />
         
         <TextBlock Text="Hex Preview (auto-updated):" FontWeight="Bold" />
         <TextBox Text="{Binding HexValue, Mode=OneWay}" 
